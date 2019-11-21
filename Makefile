@@ -1,7 +1,7 @@
 
 CPPFLAGS = -std=c++11
 COMPILER = $(shell $(CXX) -v 2>&1 )
-echo "$COMPILER"
+CXXFLAGS = -std=c++11
 ifeq ($(findstring clang,$(COMPILER)),clang)
     CXXFLAGS += -stdlib=libc++
     LDFLAGS += -stdlib=libc++
